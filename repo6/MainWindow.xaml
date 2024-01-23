@@ -11,5 +11,14 @@
             <ColumnDefinition Width="Auto" />
             <ColumnDefinition Width="*"/> 
         </Grid.ColumnDefinitions>
+        <ListBox Name="albumsListBox" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Margin="10">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Border BorderBrush="LightGray" BorderThickness="1" Padding="5" Margin="0,0,0,5">
+                        <TextBlock Text="{Binding Name}" />
+                    </Border>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
     </Grid>
 </Window>
