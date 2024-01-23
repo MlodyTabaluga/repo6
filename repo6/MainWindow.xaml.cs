@@ -63,5 +63,11 @@ namespace repo6
                 photosListView.ItemsSource = selectedAlbum.Photos;
             }
         }
+        private void photosListView_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            Photo photo = (Photo)photosListView.SelectedItem;
+            Details details = new Details(photo);
+            details.ShowDialog();
+        }
     }
 }
