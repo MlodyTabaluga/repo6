@@ -28,7 +28,7 @@
                     <GridViewColumn Header="Podpis" Width="350" DisplayMemberBinding="{Binding Caption}">
                         <GridViewColumn.HeaderContainerStyle>
                             <Style TargetType="GridViewColumnHeader">
-                                <Setter Property="HorizontalContentAlignment" Value="Left" />
+                                <Setter Property="HorizontalContentAlignment" Value="Left"  />
                             </Style>
                         </GridViewColumn.HeaderContainerStyle>
                     </GridViewColumn>
