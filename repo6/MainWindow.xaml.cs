@@ -55,5 +55,11 @@ namespace repo6
             albumsListBox.ItemsSource = Albums;
             albumsListBox.SelectionChanged += AlbumsListBox_SelectionChanged;
         }
+        private void photosListView_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            Photo photo = (Photo)photosListView.SelectedItem;
+            Details details = new Details(photo);
+            details.ShowDialog();
+        }
     }
 }
