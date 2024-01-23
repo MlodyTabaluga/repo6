@@ -19,9 +19,12 @@ namespace repo6
     /// </summary>
     public partial class Details : Window
     {
-        public Details()
+        Photo photo;
+        public Details(Photo photo1)
         {
             InitializeComponent();
+            photo = photo1;
+            Zdjecie.Source = new BitmapImage(new Uri(photo.Image, UriKind.Relative));
         }
     }
 }
