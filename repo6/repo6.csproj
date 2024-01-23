@@ -7,4 +7,26 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Images\esa1.jpg" />
+    <None Remove="Images\esa2.jpg" />
+    <None Remove="Images\esa3.jpg" />
+    <None Remove="Images\esa4.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\esa1.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\esa2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\esa3.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\esa4.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
 </Project>
