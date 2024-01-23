@@ -11,6 +11,31 @@
             <ColumnDefinition Width="Auto" />
             <ColumnDefinition Width="*"/> 
         </Grid.ColumnDefinitions>
+        <ListView Name="photosListView" Grid.Column="1" MouseDoubleClick="photosListView_MouseDoubleClick" HorizontalAlignment="Left" VerticalAlignment="Top" Width="550" Height="400" Margin="10">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Zdjęcie" Width="150">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Border BorderBrush="LightGray" BorderThickness="1" Padding="5">
+                                    <Image Source="{Binding Image}" Width="100" Height="100" />
+                                </Border>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+
+
+                    <GridViewColumn Header="Podpis" Width="350" DisplayMemberBinding="{Binding Caption}">
+                        <GridViewColumn.HeaderContainerStyle>
+                            <Style TargetType="GridViewColumnHeader">
+                                <Setter Property="HorizontalContentAlignment" Value="Left"  />
+                            </Style>
+                        </GridViewColumn.HeaderContainerStyle>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
         <ListBox Name="albumsListBox" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Margin="10">
             <ListBox.ItemTemplate>
                 <DataTemplate>
